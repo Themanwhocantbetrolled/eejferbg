@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Маршрутизация </title>
+<meta charset="utf-8" />
+<style>
+  [v-cloak]{
+     display:none;
+ }
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+  
+     
+
+}
+
+ 
+.services {
+  background: #131313;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10rem 0;
+}
+
+.services h1 {
+  background-color: #ff8177;
+  background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+}
+
+.services__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.services__card {
+  margin: 10px;
+  height: 425px;
+  width: 300px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  
+  color: #fff;
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+  transition: 0.3s ease-in;
+}
+
+.services__card:nth-child(2) {
+  background: #1fa2ff; 
+  background: -webkit-linear-gradient(
+    to right,
+    #a6ffcb,
+    #12d8fa,
+    #1fa2ff
+  ); 
+  background: linear-gradient(
+    to right,
+    #a6ffcb,
+    #12d8fa,
+    #1fa2ff
+  );
+}
+
+.services__card:nth-child(3) {
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+}
+
+.services__card h2 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.ho1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 30px;
+  text-style : bold;
+  color:#131313;
+}
+.l1{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  text-decoration:none;
+  font-size: 30px;
+
+}
+.l2{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  text-decoration:none;
+  font-size: 30px;
+
+}
+.l3{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  text-decoration:none;
+  font-size: 30px;
+
+}
+ .l1 a {
+   text-decoration: none;
+   color:#131313;
+ }
+ .l1 a :hover{ 
+   color:linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%);
+  
+   }
+   .l2 a {
+   text-decoration: none;
+   color: #131313;
+ }
+ a :hover{ 
+   color:#0000;
+  
+   }
+   .l3 a {
+   text-decoration: none;
+   color: #131313;
+ }
+ .l3 a :hover{ 
+   color:#0000;
+  
+   }
+</style>
+</head>
+<body>
+ 
+    <div class  = "services" id = "services">
+        <h1>About me</h1>
+    <div class="services__wrapper" id = "app" v-cloak>
+               
+        <div class="services__card">
+          <h2>Hobbies</h2>
+           <div class = "ho1" v-for = "i in hobbies">
+                {{ i }} 
+           </div>
+
+        </div>
+        <div class="services__card">
+          <h2>Education</h2>
+          <div class = "ho1" v-for = "i in wherestydu">
+            {{ i }} 
+       </div>
+       </div>
+        <div class="services__card">
+          <h2>Youtube blogers</h2>
+          <div class = "l1">
+            <a  href = "https://www.youtube.com/c/TheSkittleSLive" target="_blank">
+                 {{ youtubeblog[0] }} 
+            </a>
+       </div>
+       <div class = "l2">
+        <a  href = "https://www.youtube.com/c/VovaRomanchenko" target="_blank">
+          {{ youtubeblog[1] }} 
+     </a>
+       </div>
+       <div class = "l3">
+        <a  href = "https://www.youtube.com/c/ptuxermann" target="_blank">
+          {{ youtubeblog[2] }} 
+     </a>
+       </div>
+        </div>
+        <div class="services__card">
+          <h2>Personality</h2>
+          <div class = "ho1" v-for = "i in quality">
+            {{ i }} 
+       </div>
+         
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app1.js"></script>
+</body>
+</html>
